@@ -1,0 +1,25 @@
+# main.py
+import random
+def shuffle(numShuffles):
+  deck=[]
+  for i in range(1,14):
+    for j in range(4):
+      deck.append(i)
+  print("Original deck: "+str(deck))
+
+  for i in range(numShuffles):
+    w=len(deck)
+    d=random.randint(0,w-1)
+    x=random.randint(0,w-1)
+    temp=deck[d]
+    deck[d]=deck[x]
+    deck[x]=temp
+  
+  print("Shuffled deck after "+str(numShuffles)+" swaps: "+str(deck))
+  
+shuffle(500)
+
+list2=[1,2,3,4]
+list2[0],list2[2]=list2[2],list2[0]
+
+print(list2)
